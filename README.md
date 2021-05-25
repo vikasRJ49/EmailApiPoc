@@ -53,15 +53,19 @@ Enable CORS setting for this end point from AWS api get way.
   b. Pass username and password as request params for list emails api <br>
   https://iht9pd610i.execute-api.us-east-2.amazonaws.com/Prod/inbox/email/2?username=pieeyecandidate@outlook.com&password=2021-codder%23 </br>
   c. please find resonse in body
+  ![EmailApp screenshot](docs/postman.png)
+  
+  
+# Step 9
 
-#  Step 9
+   Please install CORS plugin in browser and turn it on ( it is workaround , as facing some issue related to CORS from S3)
+
+#  Step 10
 
    Please find sample ui at below location </br>
    https://emailapiclient.s3.us-east-2.amazonaws.com/index.html
+    ![EmailApp screenshot](docs/site.png)
    
-# Step 10 
-
-   Please install CORS plugin in browser and turn it on ( it is workaround , as facing some issue related to CORS from S3)
    
 # Step 11 
 
