@@ -1,0 +1,21 @@
+=  Email API Documents 
+
+This is an example output for a service running at https://iht9pd610i.execute-api.us-east-2.amazonaws.com/Prod:
+
+== List All Emails API Example
+
+.request
+include::{snippets}/listEmailsTest/http-request.adoc[]
+
+.response
+include::{snippets}/listEmailsTest/http-response.adoc[]
+
+== Fetch an Email API Example
+
+.request
+include::{snippets}/listEmailTest/http-request.adoc[]
+
+.response
+include::{snippets}/listEmailTest/http-response.adoc[]
+
+The data which we can see as part of documentation will loaded from MockMvc Test case data

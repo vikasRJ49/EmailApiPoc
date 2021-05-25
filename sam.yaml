@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: AWS Serverless Spring Boot API - mailapplication::mail-service
+Globals:
+  Api:
+    Cors:
+      AllowMethods: "'*'"
+    EndpointConfiguration: REGIONAL    
+  
+Resources:
+  MailServiceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.demo.emailapp.aws.awsRequestHandler::handleRequest
+      Runtime: java8
+      CodeUri: target/emailapi-0.0.1-SNAPSHOT-lambda-package.zip
+      MemorySize: 512
+      Policies: AWSLambdaBasicExecutionRole
+      Timeout: 30
+      Events:
+        GetResource:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: any
+            
+Outputs:
+    MailServiceFunction:
+      Description: "EMail Service Lambda Function ARN"
+      Value: !GetAtt MailServiceFunction.Arn
